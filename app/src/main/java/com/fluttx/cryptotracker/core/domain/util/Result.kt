@@ -1,4 +1,4 @@
-package com.fluttx.cryptotracker.util
+package com.fluttx.cryptotracker.core.domain.util
 
 typealias DomainError = Error
 

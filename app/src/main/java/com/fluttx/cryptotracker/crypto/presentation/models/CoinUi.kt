@@ -3,7 +3,7 @@ package com.fluttx.cryptotracker.crypto.presentation.models
 import android.icu.text.NumberFormat
 import androidx.annotation.DrawableRes
 import com.fluttx.cryptotracker.crypto.domain.Coin
-import com.fluttx.cryptotracker.util.getDrawableIdForCoin
+import com.fluttx.cryptotracker.core.presentation.util.getDrawableIdForCoin
 import java.util.Locale
 
 data class CoinUi(

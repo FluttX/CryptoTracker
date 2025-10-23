@@ -1,4 +1,4 @@
-package com.fluttx.cryptotracker.util
+package com.fluttx.cryptotracker.core.presentation.util
 
 import com.fluttx.cryptotracker.R
 

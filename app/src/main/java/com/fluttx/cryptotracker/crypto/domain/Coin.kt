@@ -5,7 +5,7 @@ data class Coin(
     val rank: Int,
     val name: String,
     val symbol: String,
-    val marketCapUSD: Double,
-    val priceUSD: Double,
-    val changePercent24Hour: Double,
+    val marketCapUsd: Double,
+    val priceUsd: Double,
+    val changePercent24Hr: Double,
 )
