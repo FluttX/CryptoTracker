@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">CryptoTracker</string>
+    <string name="error_request_timeout">The request has timed out. Please try again later.</string>
+    <string name="error_too_many_requests">Request limit reached. Please try again after a short while.</string>
+    <string name="error_no_internet">No internet connection detected. Please check your network settings and try again.</string>
+    <string name="error_something_went_wrong">An unexpected error occurred. Please try again later.</string>
+    <string name="error_serialization">A data processing error occurred. Please refresh the application.</string>
 </resources>

@@ -1,6 +1,7 @@
 package com.fluttx.cryptotracker.crypto.presentation.coin_list
 
 
+import android.widget.Toast
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -11,13 +12,23 @@ import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.PreviewLightDark
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.compose.LocalLifecycleOwner
+import androidx.lifecycle.repeatOnLifecycle
+import com.fluttx.cryptotracker.core.presentation.util.toString
 import com.fluttx.cryptotracker.crypto.presentation.coin_list.components.CoinListItem
 import com.fluttx.cryptotracker.crypto.presentation.coin_list.components.previewCoin
 import com.fluttx.cryptotracker.ui.theme.CryptoTrackerTheme
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.emptyFlow
+import kotlinx.coroutines.withContext
 
 @Composable
 fun CoinListScreen(
@@ -51,16 +62,14 @@ fun CoinListScreen(
 @PreviewLightDark
 @Composable
 fun CoinListScreenPreview() {
-    val state = CoinListState(
-        isLoading = false,
-        coins = (1..100).map {
-            previewCoin.copy(id = it.toString())
-        }
-    )
-
     CryptoTrackerTheme {
         CoinListScreen(
-            state = state,
+            state = CoinListState(
+                isLoading = false,
+                coins = (1..100).map {
+                    previewCoin.copy(id = it.toString())
+                }
+            ),
             modifier = Modifier
                 .background(MaterialTheme.colorScheme.background),
         )
