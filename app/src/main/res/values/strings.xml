@@ -5,4 +5,9 @@
     <string name="error_no_internet">No internet connection detected. Please check your network settings and try again.</string>
     <string name="error_something_went_wrong">An unexpected error occurred. Please try again later.</string>
     <string name="error_serialization">A data processing error occurred. Please refresh the application.</string>
+    <string name="icon_animation">Icon Animation</string>
+    <string name="value_animation">Value Animation</string>
+    <string name="market_cap">Market Cap</string>
+    <string name="price">Price\n</string>
+    <string name="change_last_24h">Chnage Last 24H</string>
 </resources>
